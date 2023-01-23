@@ -1,0 +1,36 @@
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container-fluid" style="background-color: #eaf8f8;">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" routerLink="/">Home</a>
+                    </li>
+                    <li>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </li>
+    
+                </ul>
+                <ul class="d-flex navbar-nav">
+                    <li><a class="seller nav-link active" routerLink="/register">Seller</a></li>
+                    <li><a class="nav-link active" routerLink="/login">Login</a></li>
+                </ul>
+                <li class="nav-link active">
+                    <button class="btn btn-light" routerLink="/addtocart">
+                        <i style="font-size: 30px;" class="fas fa-cart-plus">{{totalitem}}</i>
+                        <div style="font-size: 20px; color:#000;" class="badge bg-dark"></div>
+                    </button>
+                </li>
+    
+            </div>
+        </div>
+    </nav>
+</body>

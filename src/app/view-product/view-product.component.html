@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row product-details" *ngIf="product">
+        <div class="col-md-6">
+            <img class="product-img" src="{{product.image}}">
+        </div>
+        <div class="col-sm-6">
+            <div class="details">
+                <h1>{{product.title}}</h1>
+                <hr>
+                <h6>Description:-</h6>
+                <p>{{product.description}}</p>
+            </div>
+            <hr>
+            <h6>Amout:₹{{product.price}}/-</h6>
+            <hr>
+            <button routerLink="/checkout">Buy Now</button>
+            <button *ngIf="!removeCart" class="button2"  (click)="addtocart()">Add To cart</button>
+            <button *ngIf="removeCart" class="button2" (click)="removetocart(product.id)">Remove To cart</button>
+           <div class="quantity-group">
+            <button (click)="handleQuantity('min',product)">-</button>
+            <input  type="text" value="{{productQuantity}}">
+            <button (click)="handleQuantity('plus',product)">+</button>
+           </div>
+
+        </div>
+
+    </div>
+</div>
+<app-footer></app-footer>

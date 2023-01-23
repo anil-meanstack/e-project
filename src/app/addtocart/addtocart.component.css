@@ -1,0 +1,27 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #c09ec9;
+} 
+.empty{
+    text-align: right;
+}
+.img{
+    text-align: center;
+}
+.button{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.quantity-group{
+    margin-top: 20px;
+}
+.quantity-group button{
+    /* background-color: hsl(165, 24%, 49%); */
+    padding: 10px;
+}
+.quantity-group input{
+   width: 100px;
+   padding: 5px;
+   margin-left: 4px;
+   margin-right: 4px;
+}

@@ -1,0 +1,21 @@
+.checkout h1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.checkout h3 {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+form{
+    margin-left: 28%;
+    margin-bottom: 20%;
+}
+.input{
+    width: 300px;  
+}
+.peyment{
+    margin-top: 6%;
+}
+
