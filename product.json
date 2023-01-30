@@ -98,26 +98,15 @@
   ],
   "cart": [
     {
-      "title": "boAt Airdopes 191G with 6mm Dual Drivers, Quad Mics ENx Tech & Beast Mode for Gaming Bluetooth Headset  (Raging Red, True Wireless)",
-      "image": "https://rukminim1.flixcart.com/image/416/416/l432ikw0/headphone/b/9/g/-original-imagf2yzeqr5vxar.jpeg?q=70",
-      "price": 1499,
-      "description": " It's time to Be The Game, with Airdopes 191G TWS earbuds. The 2x 6mm dual drivers in the earbuds are there to deliver an immersive listening time. Our ENx Tech enabled quad mics help you to be heard crystal clear across voice calls.",
-      "quantity": 1,
-      "total": 1499,
+      "title": "Noise ColorFit Brio Smartwatch  (Black Strap, Regular)",
+      "image": "https://rukminim1.flixcart.com/image/416/416/ku04o7k0/smartwatch/d/z/u/android-ios-wrb-sw-colorfitbrio-std-blk-blk-noise-no-original-imag77xp9rd3rqgm.jpeg?q=70",
+      "price": 1299,
+      "description": "It's a very catchy watch that noise has released at this price point giving out so much features which you only get in high range smartwatches. The display is the main highlight.",
+      "total": 7794,
+      "quantity": 6,
       "userId": 1,
-      "productId": 3,
-      "id": 6
-    },
-    {
-      "title": "boAt Airdopes 191G with 6mm Dual Drivers, Quad Mics ENx Tech & Beast Mode for Gaming Bluetooth Headset  (Raging Red, True Wireless)",
-      "image": "https://rukminim1.flixcart.com/image/416/416/l432ikw0/headphone/b/9/g/-original-imagf2yzeqr5vxar.jpeg?q=70",
-      "price": 1499,
-      "description": " It's time to Be The Game, with Airdopes 191G TWS earbuds. The 2x 6mm dual drivers in the earbuds are there to deliver an immersive listening time. Our ENx Tech enabled quad mics help you to be heard crystal clear across voice calls.",
-      "total": 4497,
-      "quantity": 3,
-      "userId": 1,
-      "productId": 2,
-      "id": 7
+      "productId": 11,
+      "id": 1
     }
   ],
   "orders": [
@@ -129,6 +118,15 @@
       "totalPrice": 1499,
       "userId": 2,
       "id": 1
+    },
+    {
+      "email": "anil@gmail.com",
+      "number": 8264369323,
+      "address": "sukhsal",
+      "pinCode": "140126",
+      "totalPrice": 1499,
+      "userId": 1,
+      "id": 2
     }
   ]
 }

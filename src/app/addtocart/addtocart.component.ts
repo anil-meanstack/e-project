@@ -25,9 +25,7 @@ export class AddtocartComponent {
         this.grandTotal += item.total
         this.Quantity += item.quantity
       });
-
     })
-
   }
 
   removeToCart(cartId: number | undefined) {
@@ -37,11 +35,8 @@ export class AddtocartComponent {
       if (result) {
         this.cart.getcartList(userId)
       }
-
       this.removeCart = false
-
     })
-
   }
 
 
