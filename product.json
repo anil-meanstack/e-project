@@ -86,8 +86,49 @@
       "email": "anil@gmail.com",
       "password": "anil123",
       "id": 1
+    },
+    {
+      "name": "rohit",
+      "phone": "1478523691",
+      "address": "vpo. sukhsal dist. roper teh. nangal",
+      "email": "rohit@gmail.com",
+      "password": "rohit123",
+      "id": 2
     }
- 
   ],
-  "orders": []
+  "cart": [
+    {
+      "title": "boAt Airdopes 191G with 6mm Dual Drivers, Quad Mics ENx Tech & Beast Mode for Gaming Bluetooth Headset  (Raging Red, True Wireless)",
+      "image": "https://rukminim1.flixcart.com/image/416/416/l432ikw0/headphone/b/9/g/-original-imagf2yzeqr5vxar.jpeg?q=70",
+      "price": 1499,
+      "description": " It's time to Be The Game, with Airdopes 191G TWS earbuds. The 2x 6mm dual drivers in the earbuds are there to deliver an immersive listening time. Our ENx Tech enabled quad mics help you to be heard crystal clear across voice calls.",
+      "quantity": 1,
+      "total": 1499,
+      "userId": 1,
+      "productId": 3,
+      "id": 6
+    },
+    {
+      "title": "boAt Airdopes 191G with 6mm Dual Drivers, Quad Mics ENx Tech & Beast Mode for Gaming Bluetooth Headset  (Raging Red, True Wireless)",
+      "image": "https://rukminim1.flixcart.com/image/416/416/l432ikw0/headphone/b/9/g/-original-imagf2yzeqr5vxar.jpeg?q=70",
+      "price": 1499,
+      "description": " It's time to Be The Game, with Airdopes 191G TWS earbuds. The 2x 6mm dual drivers in the earbuds are there to deliver an immersive listening time. Our ENx Tech enabled quad mics help you to be heard crystal clear across voice calls.",
+      "total": 4497,
+      "quantity": 3,
+      "userId": 1,
+      "productId": 2,
+      "id": 7
+    }
+  ],
+  "orders": [
+    {
+      "email": "rohit@gmail.com",
+      "number": 8264369323,
+      "address": "sukhsal",
+      "pinCode": "140126",
+      "totalPrice": 1499,
+      "userId": 2,
+      "id": 1
+    }
+  ]
 }

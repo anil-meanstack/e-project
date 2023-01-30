@@ -5,33 +5,36 @@
     <div class="row">
       <div class="col-sm-7 shipping">
         <h3>Add shipping address</h3>
+        <p class="text-center" style="color: green">{{orderMsg}}</p>
 
-        <form class="was-validated" [formGroup]="data" (ngSubmit)="dataSubmit()">
+        <form class="was-validated" [formGroup]="data" (ngSubmit)="dataSubmit(data.value)">
           <div class="mt-3">
             <label>E-mail</label>
-            <input class="form-control mt-3 input" type="email" formControlName="email" placeholder="Enter user email" required>
-          </div>
-          <div class="mt-3">
-            <label>Mobile Number</label>
-            <input class="form-control mt-3 input" type="number" formControlName="number" placeholder="Enter your mobile number"
+            <input class="form-control mt-3 input" type="email" formControlName="email" placeholder="Enter user email"
               required>
           </div>
           <div class="mt-3">
+            <label>Mobile Number</label>
+            <input class="form-control mt-3 input" type="number" formControlName="number"
+              placeholder="Enter your mobile number" required>
+          </div>
+          <div class="mt-3">
             <label>Address</label>
-            <textarea class="form-control mt-3 input" type="address" formControlName="address" placeholder="Enter your address"
-              required></textarea>
+            <textarea class="form-control mt-3 input" type="address" formControlName="address"
+              placeholder="Enter your address" required></textarea>
           </div>
           <div class="mt-3">
             <label>Pin Code</label>
-            <input class="form-control mt-3 input" type="pincode" formControlName="pinCode" placeholder="Enter Pinn code" required>
+            <input class="form-control mt-3 input" type="pincode" formControlName="pinCode"
+              placeholder="Enter Pinn code" required>
           </div>
           <div class="mt-4">
             <button class="btn btn-dark">Order Now</button>
           </div>
         </form>
       </div>
-      <div class="col-sm-5 peyment">  
-        <h3>Total Amout:</h3>
+      <div class="col-sm-5 peyment">
+        <h3>Total Amout:-<span>{{grandTotal|currency:"INR"}}</span></h3>
         <h5>Payment Method :-</h5>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
@@ -40,7 +43,7 @@
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" (click)="pey()" name="flexRadioDefault" id="flexRadioDefault2">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
           <label class="form-check-label" for="flexRadioDefault2">
             Net Banking
           </label>

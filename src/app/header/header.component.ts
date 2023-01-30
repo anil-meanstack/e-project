@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CartService } from '../cart.service';
+import { product } from '../data-type';
 
 @Component({
   selector: 'app-header',
@@ -7,19 +8,26 @@ import { CartService } from '../cart.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  public totalitem=0;
-constructor(private cart:CartService){
- this.cart.getProduct().subscribe((res)=>{
-  this.totalitem=res.length
- })
+
+  cartItems = 0;
+
+  constructor(private cart: CartService) { }
+
+  ngOnInit(): void {
+    if (localStorage.getItem('user')) {
+      let userStore = localStorage.getItem('user');
+      let userData = userStore && JSON.parse(userStore);
+      this.cart.getcartList(userData.id)
+    };
+
+    let cartdata = localStorage.getItem('localCart');
+    if (cartdata) {
+      this.cartItems = JSON.parse(cartdata).length
+    }
+    this.cart.cartData.subscribe((items): void => {
+      this.cartItems = items.length
+    })
+  }
 }
-ngOnInit():void{
-   let cartdata=localStorage.getItem('localcart')
-   if(cartdata){
-    this.totalitem=JSON.parse(cartdata).length
-   }
-   this.cart.cartData.subscribe((items)=>{
-   this.totalitem=items.length  
-   })
-}
-}
+
+

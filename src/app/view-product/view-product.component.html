@@ -14,14 +14,15 @@
             <hr>
             <h6>Amout:₹{{product.price}}/-</h6>
             <hr>
-            <button routerLink="/checkout">Buy Now</button>
-            <button *ngIf="!removeCart" class="button2"  (click)="addtocart()">Add To cart</button>
+            <div class="quantity-group">
+                <button (click)="handleQuantity('min',product)">-</button>
+                <input type="text" value="{{productQuantity}}">
+                <button (click)="handleQuantity('plus',product)">+</button>
+            </div><br>
+            <button>Buy Now</button>
+            <button *ngIf="!removeCart" class="button2" (click)="addtocart()">Add To cart</button>
             <button *ngIf="removeCart" class="button2" (click)="removetocart(product.id)">Remove To cart</button>
-           <div class="quantity-group">
-            <button (click)="handleQuantity('min',product)">-</button>
-            <input  type="text" value="{{productQuantity}}">
-            <button (click)="handleQuantity('plus',product)">+</button>
-           </div>
+           
 
         </div>
 

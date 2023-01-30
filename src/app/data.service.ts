@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { login, signup } from './data-type';
+import { Router } from '@angular/router';
 
 
 
@@ -9,8 +10,8 @@ import { login, signup } from './data-type';
   providedIn: 'root'
 })
 export class DataService {
-
-  constructor(private http: HttpClient) { }
+  invalidUserAuth = new EventEmitter<boolean>(false);
+  constructor(private http: HttpClient,private _router:Router) { }
   // user Signup api
   userSignup(data: signup) {
     return this.http.post("http://localhost:3000/userSignup", data, { observe: 'response' }).subscribe
@@ -23,8 +24,11 @@ export class DataService {
   //User Login api
   userLogin(data: login) {
     this.http.get<signup[]>(`http://localhost:3000/userSignup?email=${data.email}&password=${data.password}`, { observe: 'response' }).subscribe((result) => {
-      if (result && result.body) {
+      if (result && result.body?.length) {
+        this.invalidUserAuth.emit(false)
         localStorage.setItem('user', JSON.stringify(result.body[0]));
+      } else {
+        this.invalidUserAuth.emit(true)
       }
     })
   }
@@ -39,6 +43,6 @@ export class DataService {
   viewProduct(id: any) {
     return this.http.get("http://localhost:3000/Product/" + id)
   }
-
+ 
 
 }

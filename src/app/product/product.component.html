@@ -1,15 +1,18 @@
 <app-header></app-header>
 <div class="container">
-    <div class="row">
+    <div class="row" style="margin-left: 70px;">
         <ng-container *ngFor="let item of productData">
             <div class="card col-md-3">
-                <img src="{{item.image}}">
-                <h4 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width: 100ch;">{{item.title}}
-                </h4>
-                <p style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width: 100ch;">
-                    {{item.description}}</p>
-                <p><strong>Amout:</strong>{{item.price|currency: "INR"}}/-</p>
-                <button class="btn btn-dark " (click)="viewDetails(item.id)"> View details</button> 
+                <img (click)="viewDetails(item.id)" src="{{item.image}}">
+                <a (click)="viewDetails(item.id)">
+                    <h4 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width: 100ch;">
+                        {{item.title}}
+                    </h4>
+                    <p style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width: 100ch;">
+                        {{item.description}}</p>
+                    <p><strong>Amout:</strong>{{item.price|currency: "INR"}}/-</p>
+                </a>
+                <button class="btn btn-dark " (click)="viewDetails(item.id)"> View details</button>
             </div>
         </ng-container>
     </div>

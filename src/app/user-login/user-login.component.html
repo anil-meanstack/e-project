@@ -9,15 +9,15 @@
 
                 <form class="was-validated" [formGroup]="data" (ngSubmit)="login()" >
                     <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-                        <h4>Sign in </h4>
-                        
+                        <h4>Sign in </h4><br> 
                     </div>
+                    <p style="color: red">{{authError}}</p>
          <hr>
 
                     <!-- Email input -->
                     <div class="form-outline mb-4">
                         <label class="form-label" for="email">Email address</label>
-                        <input type="email" id="form3Example3" class="form-control form-control-lg" formControlName="email"
+                        <input type="email" id="email" class="form-control form-control-lg" formControlName="email"
                             placeholder="Enter a valid email address" required />
                      
                     </div>
