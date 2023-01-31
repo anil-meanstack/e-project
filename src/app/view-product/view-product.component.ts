@@ -15,7 +15,6 @@ export class ViewProductComponent {
   removeCart = false;
   cartData: product | undefined | any;
   constructor(private service: DataService, private route: ActivatedRoute, private cart: CartService) {
-
   }
   ngOnInit(): void {
     let productId: any = this.route.snapshot.url[1].path;
