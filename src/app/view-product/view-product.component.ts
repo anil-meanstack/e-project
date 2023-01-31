@@ -85,13 +85,13 @@ export class ViewProductComponent {
       this.cart.removeItemFromCart(id)
       this.removeCart = false;
     } else {
-      let user = localStorage.getItem('user');
+      let user = localStorage.getItem('user');  
       let userId = user && JSON.parse(user).id;
 
       this.cartData && this.cart.removeTocart(this.cartData.id).subscribe((result) => {
         if (result) {
           this.cart.getcartList(userId)
-        }
+        }   
       })
       this.removeCart = false;
     }

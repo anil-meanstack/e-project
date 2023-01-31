@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class DataService {
   invalidUserAuth = new EventEmitter<boolean>(false);
-  constructor(private http: HttpClient,private _router:Router) { }
+  constructor(private http: HttpClient, private _router: Router) { }
   // user Signup api
   userSignup(data: signup) {
     return this.http.post("http://localhost:3000/userSignup", data, { observe: 'response' }).subscribe
@@ -43,6 +43,10 @@ export class DataService {
   viewProduct(id: any) {
     return this.http.get("http://localhost:3000/Product/" + id)
   }
- 
+  userAuthReload(){
+    if(localStorage.getItem('user')){
+      this._router.navigate(['/']);
+    }
+  }
 
 }

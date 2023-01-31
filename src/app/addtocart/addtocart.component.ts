@@ -11,7 +11,7 @@ import { product } from '../data-type';
 export class AddtocartComponent {
   productData: any;
   productQuantity: number = 1;
-  grandTotal = 0; 
+  grandTotal = 0;
   Quantity = 0;
   cartData: product | undefined | any;
   removeCart = false;
@@ -38,7 +38,6 @@ export class AddtocartComponent {
       this.removeCart = false
     })
   }
-
 
 }
 

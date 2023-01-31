@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -22,6 +21,7 @@ export class UserLoginComponent {
       email: new FormControl,
       password: new FormControl
     })
+    this.service.userAuthReload();
   }
   get input(): { [key: string]: AbstractControl } {
     return this.data.controls
