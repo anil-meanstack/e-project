@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from '../cart.service';
-import { product } from '../data-type';
 
 @Component({
   selector: 'app-header',
@@ -36,10 +35,9 @@ export class HeaderComponent {
       })
     })
   }
-  userLogout(){
+  userLogout() {
     localStorage.removeItem('user');
     this.route.navigate(['/login'])
-    
   }
 }
 
