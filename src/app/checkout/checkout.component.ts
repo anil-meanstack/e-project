@@ -39,30 +39,32 @@ export class CheckoutComponent {
   }
 
   dataSubmit(data: { email: string, number: string, address: string, pinCode: string, pincode: string }) {
-    let user = localStorage.getItem('user');
-    let userId = user && JSON.parse(user).id;
-    if (this.grandTotal) {
-      let oderData: order = {
-        ...data,
-        totalPrice: this.grandTotal,
-        userId,
-        id: undefined,
-      }
-      this.cartData?.forEach((item: any) => {
-        setTimeout(() => {
-          item.id && this.service.deleteItemscart(item.id);
-        }, 700)
-      })
-      this.service.ordersNow(oderData).subscribe((result) => {
-        if (result) {
-          this.orderMsg = "Your order has been placed"
-          setTimeout(() => {
-            this._router.navigateByUrl("/my-order")
-            this.orderMsg = undefined
-          }, 2000)
+    if (this.data.valid) {
+      let user = localStorage.getItem('user');
+      let userId = user && JSON.parse(user).id;
+      if (this.grandTotal) {
+        let oderData: order = {
+          ...data,
+          totalPrice: this.grandTotal,
+          userId,
+          id: undefined,
         }
-      })
+        this.cartData?.forEach((item: any) => {
+          setTimeout(() => {
+            item.id && this.service.deleteItemscart(item.id);
+          }, 700)
+        })
+        this.service.ordersNow(oderData).subscribe((result) => {
+          if (result) {
+            this.orderMsg = "Your order has been placed"
+            setTimeout(() => {
+              this._router.navigateByUrl("/my-order")
+              this.orderMsg = undefined
+            }, 2000)
+          }
+        })
 
+      }
     }
 
   }

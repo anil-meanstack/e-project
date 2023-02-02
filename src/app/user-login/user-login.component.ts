@@ -27,6 +27,7 @@ export class UserLoginComponent {
     return this.data.controls
   }
   login() {
+   
     this.service.userLogin(this.data.value);
     this.service.invalidUserAuth.subscribe((result) => {
       if (result) {

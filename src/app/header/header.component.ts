@@ -16,7 +16,6 @@ export class HeaderComponent {
 
   ngOnInit(): void {
     this.route.events.subscribe((val: any) => {
-      console.log("header conosle.log", val)
       if (localStorage.getItem('user')) {
         let userStore = localStorage.getItem('user');
         let userData = userStore && JSON.parse(userStore);
@@ -36,6 +35,7 @@ export class HeaderComponent {
     })
   }
   userLogout() {
+    // alert("you have account logout")
     localStorage.removeItem('user');
     this.route.navigate(['/login'])
   }

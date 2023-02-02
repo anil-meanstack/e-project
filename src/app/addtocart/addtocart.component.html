@@ -1,5 +1,5 @@
 <app-header></app-header>
-<div class="container mt-5" *ngIf="productData.length==0">
+<div class="container mt-5" *ngIf="productData?.length==0">
   <div class="img">
     <img src="https://www.pngfind.com/pngs/m/272-2727925_continue-shopping-empty-cart-png-transparent-png.png"
       style="height: 200px;width: 200px; ">
@@ -14,7 +14,7 @@
     </button>
   </div>
 </div>
-<section class="h-100 gradient-custom" *ngIf="productData.length!==0">
+<section class="h-100 gradient-custom" *ngIf="productData?.length!==0">
   <div class="container py-5">
     <div class="row d-flex justify-content-center my-4">
       <div class="col-md-8">

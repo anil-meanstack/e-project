@@ -27,13 +27,13 @@ export class UserSignupComponent {
     return this.data.controls
   }
   signup() {
-    if(this.data.valid){
+    if (this.data.valid) {
       this.service.userSignup(this.data.value)
       alert("User Register Successfully")
       this._router.navigateByUrl("/login")
-    }else{
+    } else {
       alert("Enter your Information")
     }
-    
+
   }
 }

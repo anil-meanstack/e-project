@@ -102,28 +102,6 @@
       "image": "https://rukminim1.flixcart.com/image/416/416/ku04o7k0/smartwatch/d/z/u/android-ios-wrb-sw-colorfitbrio-std-blk-blk-noise-no-original-imag77xp9rd3rqgm.jpeg?q=70",
       "price": 1299,
       "description": "It's a very catchy watch that noise has released at this price point giving out so much features which you only get in high range smartwatches. The display is the main highlight.",
-      "total": 7794,
-      "quantity": 6,
-      "userId": 1,
-      "productId": 11,
-      "id": 1
-    },
-    {
-      "title": "cctv camera",
-      "image": "https://m.media-amazon.com/images/I/31mMJ7UWKaL._SX300_SY300_QL70_FMwebp_.jpg",
-      "price": 1599,
-      "description": " CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes.",
-      "quantity": 1,
-      "total": 1599,
-      "userId": 1,
-      "productId": 1,
-      "id": 2
-    },
-    {
-      "title": "Noise ColorFit Brio Smartwatch  (Black Strap, Regular)",
-      "image": "https://rukminim1.flixcart.com/image/416/416/ku04o7k0/smartwatch/d/z/u/android-ios-wrb-sw-colorfitbrio-std-blk-blk-noise-no-original-imag77xp9rd3rqgm.jpeg?q=70",
-      "price": 1299,
-      "description": "It's a very catchy watch that noise has released at this price point giving out so much features which you only get in high range smartwatches. The display is the main highlight.",
       "total": 2598,
       "quantity": 2,
       "userId": 2,
@@ -140,6 +118,17 @@
       "userId": 2,
       "productId": 2,
       "id": 4
+    },
+    {
+      "title": "cctv camera",
+      "image": "https://m.media-amazon.com/images/I/31mMJ7UWKaL._SX300_SY300_QL70_FMwebp_.jpg",
+      "price": 1599,
+      "description": " CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes.",
+      "quantity": 1,
+      "total": 1599,
+      "userId": 1,
+      "productId": 1,
+      "id": 5
     }
   ],
   "orders": [
@@ -157,7 +146,7 @@
       "number": 8264369323,
       "address": "sukhsal",
       "pinCode": "140126",
-      "totalPrice": 1499,
+      "totalPrice": 1599,
       "userId": 1,
       "id": 2
     }
