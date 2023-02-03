@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { cart, order, product } from './data-type';
 
 
@@ -28,7 +28,8 @@ export class CartService {
     return this.productlist.asObservable()
   }
 
-  // //store localstorage
+
+  //store localstorage
 
   localAddToCart(data: any) {
     let cartData = [];
@@ -86,7 +87,7 @@ export class CartService {
       }
     })
   }
-  cancelOeder(orderId:number){
-   return this.http.delete("http://localhost:3000/orders/"+orderId)
+  cancelOeder(orderId: number) {
+    return this.http.delete("http://localhost:3000/orders/" + orderId)
   }
 }

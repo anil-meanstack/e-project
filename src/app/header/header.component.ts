@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from '../cart.service';
+import { product } from '../data-type';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +12,7 @@ export class HeaderComponent {
   userName: string = "";
   menuType: string = 'default';
   cartItems = 0;
+  searchResult:undefined|product[];
 
   constructor(private cart: CartService, private route: Router) { }
 
@@ -34,6 +36,8 @@ export class HeaderComponent {
       })
     })
   }
+  
+  
   userLogout() {
     // alert("you have account logout")
     localStorage.removeItem('user');
