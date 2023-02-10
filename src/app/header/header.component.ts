@@ -12,7 +12,7 @@ export class HeaderComponent {
   userName: string = "";
   menuType: string = 'default';
   cartItems = 0;
-  searchResult:undefined|product[];
+  searchResult: undefined | product[];
 
   constructor(private cart: CartService, private route: Router) { }
 
@@ -36,8 +36,8 @@ export class HeaderComponent {
       })
     })
   }
-  
-  
+
+
   userLogout() {
     // alert("you have account logout")
     localStorage.removeItem('user');

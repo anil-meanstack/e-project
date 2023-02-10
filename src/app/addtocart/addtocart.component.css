@@ -1,6 +1,6 @@
 .gradient-custom {
     /* fallback for old browsers */
-    background: #c09ec9;
+    background: #a8ddce ;
 } 
 
 .img{
@@ -14,7 +14,7 @@
     margin-top: 20px;
 }
 .quantity-group button{
-    /* background-color: hsl(165, 24%, 49%); */
+  
     padding: 10px;
 }
 .quantity-group input{
@@ -22,4 +22,7 @@
    padding: 5px;
    margin-left: 4px;
    margin-right: 4px;
+}
+li{
+    background-color: aliceblue;
 }

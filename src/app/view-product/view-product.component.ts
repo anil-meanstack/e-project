@@ -7,7 +7,7 @@ import { DataService } from '../data.service';
 @Component({
   selector: 'app-view-product',
   templateUrl: './view-product.component.html',
-  styleUrls: ['./view-product.component.css']
+  styleUrls: ['./view-product.component.css']                                       
 })
 export class ViewProductComponent {
   product: any;
@@ -85,13 +85,13 @@ export class ViewProductComponent {
       this.cart.removeItemFromCart(id)
       this.removeCart = false;
     } else {
-      let user = localStorage.getItem('user');  
+      let user = localStorage.getItem('user');
       let userId = user && JSON.parse(user).id;
 
       this.cartData && this.cart.removeTocart(this.cartData.id).subscribe((result) => {
         if (result) {
           this.cart.getcartList(userId)
-        }   
+        }
       })
       this.removeCart = false;
     }

@@ -16,7 +16,7 @@ export class MyOrderComponent {
     this.getOrderList();
   }
   cancelOrder(orderId: number | undefined) {
-    orderId && this.service.cancelOeder(orderId).subscribe((result) => {
+    orderId && this.service.cancelOeder(orderId).subscribe((result) => { 
       this.getOrderList();
     })
   }

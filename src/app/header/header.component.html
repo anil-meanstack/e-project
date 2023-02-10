@@ -1,7 +1,7 @@
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light ">
-        <div class="container-fluid" style="background-color: #eaf8f8;">
-            <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar-expand-lg navbar" style="background-color:rgba(149, 206, 209, 0.432)">
+        <div class="container-fluid ">
+            <a class="navbar-brand " href="#">E-COM</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -14,25 +14,24 @@
                     </li>
                     <li>
                         <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search"
-                                aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                           
+                            <input style="background-color: aliceblue; margin-top: 4px;" class="form-control me-2" type="search"
+                                placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" style="margin-top: 4px" type="submit">Search</button>
                         </form>
                     </li>
 
                 </ul>
                 <div [ngSwitch]="menuType">
                     <ul class="d-flex navbar-nav" *ngSwitchCase="'default'">
-                        <li><a class="seller nav-link active" routerLink="/register">Seller</a></li>
-                        <li><a class="nav-link active" routerLink="/login">Login</a></li>
-                        <li><a class="nav-link active" routerLink="/my-order">my-order</a></li>
+                        <li class="nav-item"><a class="seller nav-link active" routerLink="/register">Seller</a></li>
+                        <li class="nav-item"><a class="nav-link active" routerLink="/login">Login</a></li>
+                        <li class="nav-item"><a class="nav-link active" routerLink="/my-order">my-order</a></li>
                     </ul>
 
                     <ul class="d-flex navbar-nav" *ngSwitchCase="'user'">
-                        <li><a class="nav-link active">{{userName | titlecase}}</a></li>
-                        <li><a class="nav-link active" routerLink="/my-order">My Orders</a></li>
-                        <li><a class="nav-link active carsul" (click)="userLogout()">Logout</a></li>
+                        <li class="nav-item"><a class="nav-link active">{{userName | titlecase}}</a></li>
+                        <li class="nav-item"><a class="nav-link active" routerLink="/my-order">My Orders</a></li>
+                        <li class="nav-item"><a class="nav-link active carsul" (click)="userLogout()">Logout</a></li>
                     </ul>
                 </div>
 

@@ -8,24 +8,21 @@
             <div class="details">
                 <h1>{{product.title}}</h1>
                 <hr>
-                <h6>Description:-</h6>
+                <b>Description:-</b>
                 <p>{{product.description}}</p>
             </div>
             <hr>
-            <h6>Amout:₹{{product.price}}/-</h6>
+            <h6>Amout:{{product.price | currency :"INR"}}/-</h6>
             <hr>
             <div class="quantity-group">
                 <button (click)="handleQuantity('min',product)">-</button>
-                <input type="text" value="{{productQuantity}}">
+                <input style="background-color: lightgray;" type="text" value="{{productQuantity}}">
                 <button (click)="handleQuantity('plus',product)">+</button>
             </div><br>
             <button>Buy Now</button>
             <button *ngIf="!removeCart" class="button2" (click)="addtocart()">Add To cart</button>
             <button *ngIf="removeCart" class="button2" (click)="removetocart(product.id)">Remove To cart</button>
-           
-
-        </div>
-
-    </div>
+         </div>
+    </div>  
 </div>
 <app-footer></app-footer>
